@@ -33,7 +33,7 @@ API: Open Library API
 
 UI/UX: Font Awesome Icons, Google Fonts (Inter)
 
-🌐 Live Demo
+🌐 Live Demo : https://book-finder-psi-nine.vercel.app/
 
 👉 View Live Application
 
@@ -67,5 +67,6 @@ Author information
 Publication years
 
 Edition counts
+
 
 Made with ❤️ by Mohammed Sofi
