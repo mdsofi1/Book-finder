@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 BookFinder AI - Pure Black Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Animated Background Elements -->
+        <div class="bg-elements">
+            <div class="bg-circle bg-circle--1"></div>
+            <div class="bg-circle bg-circle--2"></div>
+            <div class="bg-circle bg-circle--3"></div>
+        </div>
+
+        <!-- Hero Header Section -->
+        <header class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__badge">
+                        <span class="hero__badge-icon">✨</span>
+                        <span>Discover Amazing Books</span>
+                    </div>
+                    <h1 class="hero__title">
+                        <span class="hero__title-main">BookFinder</span>
+                        <span class="hero__title-accent">AI</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        Discover your next favorite book with our intelligent search powered by Open Library
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="container">
+                <!-- Floating Search Interface -->
+                <section class="search-section">
+                    <div class="search-container">
+                        <form class="search-form" id="searchForm">
+                            <div class="search-form__header">
+                                <h2 class="search-form__title">🔍 Search Books</h2>
+                                <p class="search-form__description">Find books by title, author, genre, or general search</p>
+                            </div>
+                            
+                            <div class="search-form__body">
+                                <div class="search-form__group">
+                                    <label for="searchType" class="search-form__label">Search Type</label>
+                                    <select id="searchType" class="search-form__select">
+                                        <option value="title">📖 By Title</option>
+                                        <option value="author">✍️ By Author</option>
+                                        <option value="genre">🎭 By Genre</option>
+                                        <option value="general">🔍 General Search</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="search-form__group search-form__group--flex">
+                                    <label for="searchQuery" class="search-form__label">Search Query</label>
+                                    <div class="search-input-wrapper">
+                                        <input 
+                                            type="text" 
+                                            id="searchQuery" 
+                                            class="search-form__input" 
+                                            placeholder="e.g., Harry Potter, George Orwell..."
+                                            required
+                                        >
+                                        <button type="submit" class="search-form__button">
+                                            <span class="search-form__button-text">Search</span>
+                                            <span class="search-form__button-icon">→</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Results Section -->
+                <section class="results-section">
+                    <!-- Loading Animation -->
+                    <div id="loadingSpinner" class="loading-container hidden">
+                        <div class="loading-card">
+                            <div class="loading-animation">
+                                <div class="loading-books">
+                                    <div class="loading-book"></div>
+                                    <div class="loading-book"></div>
+                                    <div class="loading-book"></div>
+                                </div>
+                            </div>
+                            <p class="loading-text">Searching for amazing books...</p>
+                        </div>
+                    </div>
+
+                    <!-- Error Message -->
+                    <div id="errorMessage" class="error-container hidden">
+                        <div class="error-card">
+                            <div class="error-icon">⚠️</div>
+                            <h3 class="error-title">Oops! Something went wrong</h3>
+                            <p class="error-text"></p>
+                            <button class="error-button" onclick="document.getElementById('searchQuery').focus()">
+                                Try Again
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Results Header -->
+                    <div id="resultsHeader" class="results-header hidden">
+                        <div class="results-badge">
+                            <span class="results-badge__icon">📚</span>
+                            <span id="resultsCount" class="results-badge__text"></span>
+                        </div>
+                    </div>
+
+                    <!-- Books Grid -->
+                    <div id="booksGrid" class="books-grid">
+                        <!-- Book cards will be inserted here -->
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__main">
+                        <p class="footer__text">Powered by Open Library API</p>
+                        <div class="footer__links">
+                            <span class="footer__heart">❤️</span>
+                            <span>Made by Mohammed Sofi</span>
+                        </div>
+                    </div>
+                    <div class="footer__contact">
+                        <a href="mailto:mdsofisarmad@gmail.com" target="_blank" class="footer__link">📧 Contact</a>
+                        <a href="https://www.linkedin.com/in/md-sofi-sarmad-b6a79929a" target="_blank" class="footer__link">💼 LinkedIn</a>
+                        <a href="https://github.com/mdsofi1" target="_blank" class="footer__link">🚀 GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
